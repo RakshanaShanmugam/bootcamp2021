@@ -108,25 +108,24 @@
                     "privateLinkServiceNetworkPolicies": "Enabled"
                 }
             ]
-        }
-        //,
-        // "virtualNetworkPeerings": {
-        //     "value": [{
-        //             "remoteVirtualNetworkId": "/subscriptions/<<subscriptionId>>/resourceGroups/IaCSBootCamp-rg/providers/Microsoft.Network/virtualNetworks/sxx-az-vnet-b-001",
-        //             "allowForwardedTraffic": true,
-        //             "allowGatewayTransit": false,
-        //             "allowVirtualNetworkAccess": true,
-        //             "useRemoteGateways": false
-        //         },
-        //         {
-        //             "remoteVirtualNetworkId": "/subscriptions/<<subscriptionId>>/resourceGroups/IaCSBootCamp-rg/providers/Microsoft.Network/virtualNetworks/sxx-az-vnet-c-001",
-        //             "allowForwardedTraffic": true,
-        //             "allowGatewayTransit": false,
-        //             "allowVirtualNetworkAccess": true,
-        //             "useRemoteGateways": false
-        //         }
-        //     ]
-        // } //,
+        },
+        "virtualNetworkPeerings": {
+            "value": [{
+                    "remoteVirtualNetworkId": "/subscriptions/<<subscriptionId>>/resourceGroups/IaCSBootCamp-rg/providers/Microsoft.Network/virtualNetworks/sxx-az-vnet-b-001",
+                    "allowForwardedTraffic": true,
+                    "allowGatewayTransit": false,
+                    "allowVirtualNetworkAccess": true,
+                    "useRemoteGateways": false
+                },
+                {
+                    "remoteVirtualNetworkId": "/subscriptions/<<subscriptionId>>/resourceGroups/IaCSBootCamp-rg/providers/Microsoft.Network/virtualNetworks/sxx-az-vnet-c-001",
+                    "allowForwardedTraffic": true,
+                    "allowGatewayTransit": false,
+                    "allowVirtualNetworkAccess": true,
+                    "useRemoteGateways": false
+                }
+            ]
+        } //,
         // "roleAssignments": {
         //     "value": [
         //         {
