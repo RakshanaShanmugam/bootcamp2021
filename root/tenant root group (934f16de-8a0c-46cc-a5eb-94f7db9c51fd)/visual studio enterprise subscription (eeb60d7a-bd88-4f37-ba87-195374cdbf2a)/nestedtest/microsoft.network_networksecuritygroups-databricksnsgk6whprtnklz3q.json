@@ -1,0 +1,166 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "name": "databricksnsgk6whprtnklz3q",
+      "apiVersion": "2021-05-01",
+      "location": "eastus",
+      "tags": null,
+      "properties": {
+        "securityRules": [],
+        "defaultSecurityRules": [
+          {
+            "name": "AllowVnetInBound",
+            "id": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/nestedtest/providers/Microsoft.Network/networkSecurityGroups/databricksnsgk6whprtnklz3q/defaultSecurityRules/AllowVnetInBound",
+            "etag": "W/\"b1a3b318-3d6a-4161-9f5a-f988a40d5991\"",
+            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "description": "Allow inbound traffic from all VMs in VNET",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "VirtualNetwork",
+              "destinationAddressPrefix": "VirtualNetwork",
+              "access": "Allow",
+              "priority": 65000,
+              "direction": "Inbound",
+              "sourcePortRanges": [],
+              "destinationPortRanges": [],
+              "sourceAddressPrefixes": [],
+              "destinationAddressPrefixes": []
+            }
+          },
+          {
+            "name": "AllowAzureLoadBalancerInBound",
+            "id": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/nestedtest/providers/Microsoft.Network/networkSecurityGroups/databricksnsgk6whprtnklz3q/defaultSecurityRules/AllowAzureLoadBalancerInBound",
+            "etag": "W/\"b1a3b318-3d6a-4161-9f5a-f988a40d5991\"",
+            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "description": "Allow inbound traffic from azure load balancer",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "AzureLoadBalancer",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 65001,
+              "direction": "Inbound",
+              "sourcePortRanges": [],
+              "destinationPortRanges": [],
+              "sourceAddressPrefixes": [],
+              "destinationAddressPrefixes": []
+            }
+          },
+          {
+            "name": "DenyAllInBound",
+            "id": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/nestedtest/providers/Microsoft.Network/networkSecurityGroups/databricksnsgk6whprtnklz3q/defaultSecurityRules/DenyAllInBound",
+            "etag": "W/\"b1a3b318-3d6a-4161-9f5a-f988a40d5991\"",
+            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "description": "Deny all inbound traffic",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Deny",
+              "priority": 65500,
+              "direction": "Inbound",
+              "sourcePortRanges": [],
+              "destinationPortRanges": [],
+              "sourceAddressPrefixes": [],
+              "destinationAddressPrefixes": []
+            }
+          },
+          {
+            "name": "AllowVnetOutBound",
+            "id": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/nestedtest/providers/Microsoft.Network/networkSecurityGroups/databricksnsgk6whprtnklz3q/defaultSecurityRules/AllowVnetOutBound",
+            "etag": "W/\"b1a3b318-3d6a-4161-9f5a-f988a40d5991\"",
+            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "description": "Allow outbound traffic from all VMs to all VMs in VNET",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "VirtualNetwork",
+              "destinationAddressPrefix": "VirtualNetwork",
+              "access": "Allow",
+              "priority": 65000,
+              "direction": "Outbound",
+              "sourcePortRanges": [],
+              "destinationPortRanges": [],
+              "sourceAddressPrefixes": [],
+              "destinationAddressPrefixes": []
+            }
+          },
+          {
+            "name": "AllowInternetOutBound",
+            "id": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/nestedtest/providers/Microsoft.Network/networkSecurityGroups/databricksnsgk6whprtnklz3q/defaultSecurityRules/AllowInternetOutBound",
+            "etag": "W/\"b1a3b318-3d6a-4161-9f5a-f988a40d5991\"",
+            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "description": "Allow outbound traffic from all VMs to Internet",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "Internet",
+              "access": "Allow",
+              "priority": 65001,
+              "direction": "Outbound",
+              "sourcePortRanges": [],
+              "destinationPortRanges": [],
+              "sourceAddressPrefixes": [],
+              "destinationAddressPrefixes": []
+            }
+          },
+          {
+            "name": "DenyAllOutBound",
+            "id": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/nestedtest/providers/Microsoft.Network/networkSecurityGroups/databricksnsgk6whprtnklz3q/defaultSecurityRules/DenyAllOutBound",
+            "etag": "W/\"b1a3b318-3d6a-4161-9f5a-f988a40d5991\"",
+            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "description": "Deny all outbound traffic",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Deny",
+              "priority": 65500,
+              "direction": "Outbound",
+              "sourcePortRanges": [],
+              "destinationPortRanges": [],
+              "sourceAddressPrefixes": [],
+              "destinationAddressPrefixes": []
+            }
+          }
+        ],
+        "subnets": [
+          {
+            "id": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/TestRG-vnet/subnets/adb-public"
+          },
+          {
+            "id": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/TestRG-vnet/subnets/adb-private"
+          }
+        ]
+      }
+    }
+  ],
+  "outputs": {}
+}
