@@ -11,6 +11,7 @@ param vNetAddressPrefixes array
 @minLength(1)
 param subnets array
 
+
 @description('Optional. DNS Servers associated to the Virtual Network.')
 param dnsServers array = []
 
