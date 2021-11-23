@@ -1,7 +1,6 @@
 @description('Required. The Virtual Network (vNet) Name.')
 param name string
 
-
 @description('Optional. Location for all resources.')
 param location string = resourceGroup().location
 
