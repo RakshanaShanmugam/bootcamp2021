@@ -1,10 +1,8 @@
 @description('Required. The Virtual Network (vNet) Name.')
 param name string
 
-
 @description('Optional. Location for all resources.')
 param location string = resourceGroup().location
-
 
 @description('Required. An Array of 1 or more IP Address Prefixes for the Virtual Network.')
 param vNetAddressPrefixes array
@@ -127,6 +125,20 @@ resource virtualNetwork_lock 'Microsoft.Authorization/locks@2016-09-01' = if (lo
   }
   scope: virtualNetwork
 }
+
+module virtualNetworkPeerings_resource 'virtualNetworkPeerings/deploy.bicep' = [for (virtualNetworkPeering, index) in virtualNetworkPeerings: {
+  name: '${uniqueString(deployment().name, location)}-virtualNetworkPeering-${index}'
+  params: {
+    localVnetName: name
+    remoteVirtualNetworkId: virtualNetworkPeering.remoteVirtualNetworkId
+    name: contains(virtualNetworkPeering, 'name') ? virtualNetworkPeering.name : '${name}-${last(split(virtualNetworkPeering.remoteVirtualNetworkId, '/'))}'
+    allowForwardedTraffic: contains(virtualNetworkPeering, 'allowForwardedTraffic') ? virtualNetworkPeering.allowForwardedTraffic : true
+    allowGatewayTransit: contains(virtualNetworkPeering, 'allowGatewayTransit') ? virtualNetworkPeering.allowGatewayTransit : false
+    allowVirtualNetworkAccess: contains(virtualNetworkPeering, 'allowVirtualNetworkAccess') ? virtualNetworkPeering.allowVirtualNetworkAccess : true
+    doNotVerifyRemoteGateways: contains(virtualNetworkPeering, 'doNotVerifyRemoteGateways') ? virtualNetworkPeering.doNotVerifyRemoteGateways : true
+    useRemoteGateways: contains(virtualNetworkPeering, 'useRemoteGateways') ? virtualNetworkPeering.useRemoteGateways : false
+  }
+}]
 
 resource appServiceEnvironment_diagnosticSettings 'Microsoft.Insights/diagnosticSettings@2017-05-01-preview' = if (!empty(diagnosticStorageAccountId) || !empty(workspaceId) || !empty(eventHubAuthorizationRuleId) || !empty(eventHubName)) {
   name: '${virtualNetwork.name}-diagnosticSettings'
