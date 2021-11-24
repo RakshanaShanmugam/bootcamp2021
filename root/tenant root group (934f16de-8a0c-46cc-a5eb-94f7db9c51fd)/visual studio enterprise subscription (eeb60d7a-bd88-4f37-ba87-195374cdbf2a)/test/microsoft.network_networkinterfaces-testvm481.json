@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Network/networkInterfaces",
       "name": "testvm481",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2021-05-01",
       "location": "northeurope",
       "tags": null,
       "properties": {
@@ -20,7 +20,7 @@
           {
             "name": "ipconfig1",
             "id": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/Test/providers/Microsoft.Network/networkInterfaces/testvm481/ipConfigurations/ipconfig1",
-            "etag": "W/\"68102182-ca7d-460b-a024-1c4730726909\"",
+            "etag": "W/\"8c38f476-3894-4726-ab4b-6d549be4a7be\"",
             "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
             "properties": {
               "provisioningState": "Succeeded",
@@ -39,8 +39,7 @@
         ],
         "dnsSettings": {
           "dnsServers": [],
-          "appliedDnsServers": [],
-          "internalDomainNameSuffix": "dnzmnkp1rmmuvknl5bovpnprhh.fx.internal.cloudapp.net"
+          "appliedDnsServers": []
         },
         "macAddress": "00-0D-3A-B5-35-1A",
         "enableAcceleratedNetworking": false,
