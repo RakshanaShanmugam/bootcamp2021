@@ -34,11 +34,9 @@
             "createOption": "FromImage",
             "caching": "ReadWrite",
             "managedDisk": {
-              "storageAccountType": "Standard_LRS",
               "id": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/Test/providers/Microsoft.Compute/disks/testvm_OsDisk_1_8f49dc8232584c849d03856c0ae81573"
             },
-            "deleteOption": "Detach",
-            "diskSizeGB": 127
+            "deleteOption": "Detach"
           },
           "dataDisks": []
         },
