@@ -33,7 +33,22 @@
         "template": {
           "$schema": "https://schema.management.azure.com/schemas/2019-08-01/tenantDeploymentTemplate.json#",
           "contentVersion": "1.0.0.0",
-          "resources": [],
+          "resources": [
+            {
+              "type": "Microsoft.Management/managementGroups",
+              "apiVersion": "2020-05-01",
+              "name": "test2mgm12",
+              "scope": "/",
+              "properties": {
+                "displayName": "test2mgm",
+                "details": {
+                  "parent": {
+                    "id": "/providers/Microsoft.Management/managementGroups/cef81442-db8e-4193-9f05-538a86260b6f"
+                  }
+                }
+              }
+            }
+          ],
           "outputs": {}
         }
       },
