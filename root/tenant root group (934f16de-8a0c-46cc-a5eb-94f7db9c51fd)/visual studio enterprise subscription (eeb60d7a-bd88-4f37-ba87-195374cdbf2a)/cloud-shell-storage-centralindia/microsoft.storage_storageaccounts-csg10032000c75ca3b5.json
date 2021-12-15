@@ -15,7 +15,8 @@
       "apiVersion": "2021-08-01",
       "location": "centralindia",
       "tags": {
-        "ms-resource-usage": "azure-cloud-shell"
+        "ms-resource-usage": "azure-cloud-shell",
+        "testtag": "tagvalue"
       },
       "properties": {
         "keyCreationTime": {
