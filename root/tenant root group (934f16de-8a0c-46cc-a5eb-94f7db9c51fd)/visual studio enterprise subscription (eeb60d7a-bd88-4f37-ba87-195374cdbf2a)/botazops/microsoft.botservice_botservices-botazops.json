@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.BotService/botServices",
+      "name": "botazops",
+      "apiVersion": "2021-05-01-preview",
+      "location": "global",
+      "tags": {},
+      "properties": {
+        "displayName": "botazops",
+        "description": null,
+        "iconUrl": "https://docs.botframework.com/static/devportal/client/images/bot-framework-default.png",
+        "endpoint": "https://botwebappazops.azurewebsites.net/api/messages",
+        "msaAppId": "de01fbf7-aec8-444f-8c64-e2863f205aad",
+        "msaAppTenantId": "934f16de-8a0c-46cc-a5eb-94f7db9c51fd",
+        "msaAppType": "UserAssignedMSI",
+        "msaAppMSIResourceId": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/botazops/providers/Microsoft.ManagedIdentity/userAssignedIdentities/botazops",
+        "developerAppInsightKey": null,
+        "developerAppInsightsApplicationId": null,
+        "luisAppIds": [],
+        "endpointVersion": "3.0",
+        "configuredChannels": [
+          "webchat"
+        ],
+        "enabledChannels": [
+          "webchat",
+          "directline"
+        ],
+        "isDeveloperAppInsightsApiKeySet": false,
+        "isStreamingSupported": false,
+        "schemaTransformationVersion": "1.3",
+        "publishingCredentials": null,
+        "parameters": null,
+        "allSettings": null,
+        "manifestUrl": null,
+        "storageResourceId": null,
+        "tenantId": "934f16de-8a0c-46cc-a5eb-94f7db9c51fd",
+        "migrationToken": null,
+        "isCmekEnabled": false,
+        "cmekKeyVaultUrl": null,
+        "openWithHint": "bfcomposer://",
+        "appPasswordHint": "/subscriptions/eeb60d7a-bd88-4f37-ba87-195374cdbf2a/resourceGroups/botazops/providers/Microsoft.KeyVault/vaults/bot-secrets-myls5n/secrets/bot-botazops-pwd-6ffsey",
+        "publicNetworkAccess": null,
+        "disableLocalAuth": false,
+        "cmekEncryptionStatus": "Off"
+      }
+    }
+  ],
+  "outputs": {}
+}
