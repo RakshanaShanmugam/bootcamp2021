@@ -10,13 +10,17 @@
   "variables": {},
   "resources": [
     {
-      "type": "Microsoft.Network/networkWatchers",
-      "name": "NetworkWatcher_northeurope",
+      "type": "Microsoft.Network/publicIPAddresses",
+      "name": "testpublicipfw",
       "apiVersion": "2022-01-01",
       "location": "northeurope",
-      "tags": null,
+      "tags": {},
       "properties": {
-        "runningOperationIds": []
+        "ipAddress": "52.169.227.55",
+        "publicIPAddressVersion": "IPv4",
+        "publicIPAllocationMethod": "Static",
+        "idleTimeoutInMinutes": 4,
+        "ipTags": []
       }
     }
   ],

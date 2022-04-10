@@ -11,20 +11,21 @@
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
-      "name": "csg10032000c75ca3b5",
+      "name": "teststgrak",
       "apiVersion": "2021-09-01",
-      "location": "centralindia",
-      "tags": {
-        "ms-resource-usage": "azure-cloud-shell"
-      },
+      "location": "eastus",
+      "tags": {},
       "properties": {
+        "defaultToOAuthAuthentication": false,
         "keyCreationTime": {
-          "key1": "2021-07-30T03:38:10.0544137Z",
-          "key2": "2021-07-30T03:38:10.0544137Z"
+          "key1": "2022-03-31T06:43:21.3512219Z",
+          "key2": "2022-03-31T06:43:21.3512219Z"
         },
+        "allowCrossTenantReplication": true,
         "privateEndpointConnections": [],
         "minimumTlsVersion": "TLS1_2",
         "allowBlobPublicAccess": false,
+        "allowSharedKeyAccess": true,
         "networkAcls": {
           "bypass": "AzureServices",
           "virtualNetworkRules": [],
@@ -33,6 +34,7 @@
         },
         "supportsHttpsTrafficOnly": true,
         "encryption": {
+          "requireInfrastructureEncryption": false,
           "services": {
             "file": {
               "keyType": "Account",
@@ -45,9 +47,7 @@
           },
           "keySource": "Microsoft.Storage"
         },
-        "accessTier": "Cool",
-        "secondaryLocation": "southindia",
-        "statusOfSecondary": "available"
+        "accessTier": "Hot"
       }
     }
   ],

@@ -11,10 +11,10 @@
   "resources": [
     {
       "type": "Microsoft.Resources/resourceGroups",
-      "name": "azopsrest",
+      "name": "biceptest",
       "apiVersion": "2019-05-01",
-      "location": "centralindia",
-      "tags": null,
+      "location": "northeurope",
+      "tags": {},
       "properties": {}
     }
   ],
