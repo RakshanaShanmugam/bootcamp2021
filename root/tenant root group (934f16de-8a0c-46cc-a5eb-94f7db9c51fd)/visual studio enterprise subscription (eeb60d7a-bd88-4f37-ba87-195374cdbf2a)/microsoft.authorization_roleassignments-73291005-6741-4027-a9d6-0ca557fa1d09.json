@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Authorization/roleAssignments",
       "name": "73291005-6741-4027-a9d6-0ca557fa1d09",
-      "apiVersion": "2021-04-01-preview",
+      "apiVersion": "2022-01-01-preview",
       "properties": {
         "DisplayName": "rakshuAutomationAccount_tCqGQ0HiLFIDfKRKwdzChJGPE3/BXxqFqfNRuiaBErg=",
         "ObjectType": "ServicePrincipal",

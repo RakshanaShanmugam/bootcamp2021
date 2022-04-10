@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Authorization/roleAssignments",
       "name": "ac2d8bd3-b0ac-4bd8-bf97-18b1d2cc10bc",
-      "apiVersion": "2021-04-01-preview",
+      "apiVersion": "2022-01-01-preview",
       "properties": {
         "DisplayName": "rakshana1002",
         "ObjectType": "User",

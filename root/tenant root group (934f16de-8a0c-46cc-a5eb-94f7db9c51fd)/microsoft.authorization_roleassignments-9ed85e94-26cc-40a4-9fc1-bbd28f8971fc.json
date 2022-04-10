@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Authorization/roleAssignments",
       "name": "9ed85e94-26cc-40a4-9fc1-bbd28f8971fc",
-      "apiVersion": "2021-04-01-preview",
+      "apiVersion": "2022-01-01-preview",
       "properties": {
         "DisplayName": "azops-pipeline-demo",
         "ObjectType": "ServicePrincipal",
